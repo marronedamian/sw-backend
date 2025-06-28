@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json.schemastore.org/nest-cli",
+  "collection": "@nestjs/schematics",
+  "sourceRoot": "src",
+  "compilerOptions": {
+    "deleteOutDir": true,
+    "webpack": false,
+    "tsConfigPath": "tsconfig.json",
+    "plugins": ["@nestjs/swagger/plugin"],
+    "assets": ["**/*.env"],
+    "watchAssets": true
+  },
+  "projects": {
+    "star-wars-api": {
+      "type": "application",
+      "root": "src",
+      "entryFile": "main",
+      "sourceRoot": "src",
+      "compilerOptions": {
+        "tsConfigPath": "tsconfig.json"
+      }
+    }
+  },
+  "monorepo": false,
+  "generateOptions": {
+    "spec": true
+  }
+}

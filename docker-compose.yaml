@@ -1,0 +1,24 @@
+services:
+  yourtarotai:
+    image: sw-backend-service:1
+    container_name: sw-backend-service
+    hostname: sw-backend-service
+    restart: always
+    expose:
+      - "3021"
+    ports: 
+      - "3021:3021"
+    env_file: .env      
+    environment:
+      NODE_ENV: ${APP_ENV}      
+    volumes:
+      - uploads:/app/uploads
+    networks:
+      - sw_backend_network
+
+volumes:
+  uploads:
+
+networks:
+  sw_backend_network:
+    driver: bridge

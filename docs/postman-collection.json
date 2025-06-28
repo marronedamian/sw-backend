@@ -1,0 +1,344 @@
+{
+	"info": {
+		"_postman_id": "abd5d8bc-334c-410d-8319-2ec34e977e42",
+		"name": "Star Wars API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "2278308",
+		"_collection_link": "https://www.postman.com/dgrelias/workspace/starwarsapi/collection/2278308-abd5d8bc-334c-410d-8319-2ec34e977e42?action=share&source=collection_link&creator=2278308"
+	},
+	"item": [
+		{
+			"name": "Personajes",
+			"item": [
+				{
+					"name": "Listar personajes (pag 1)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/star-wars/people?page=1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"star-wars",
+								"people"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener Luke Skywalker",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/star-wars/people/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"star-wars",
+								"people",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Películas",
+			"item": [
+				{
+					"name": "Listar películas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/star-wars/films",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"star-wars",
+								"films"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener Una Nueva Esperanza",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/star-wars/films/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"star-wars",
+								"films",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Naves",
+			"item": [
+				{
+					"name": "Listar naves",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/star-wars/starships",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"star-wars",
+								"starships"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener Death Star",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/star-wars/starships/9",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"star-wars",
+								"starships",
+								"9"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Planetas",
+			"item": [
+				{
+					"name": "Listar planetas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/star-wars/planets",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"star-wars",
+								"planets"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener Tatooine",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/star-wars/planets/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"star-wars",
+								"planets",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Comparación",
+			"item": [
+				{
+					"name": "Comparar personajes (Luke vs Vader)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/star-wars/people/compare?ids=1,4",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"star-wars",
+								"people",
+								"compare"
+							],
+							"query": [
+								{
+									"key": "ids",
+									"value": "1,4"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Comparar naves (Falcon vs Death Star)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/star-wars/starships/compare?ids=10,9",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"star-wars",
+								"starships",
+								"compare"
+							],
+							"query": [
+								{
+									"key": "ids",
+									"value": "10,9"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Favoritos",
+			"item": [
+				{
+					"name": "Agregar Luke como favorito",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"userId\": \"user-123\",\n    \"resourceType\": \"people\",\n    \"resourceId\": 1\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/favorites",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"favorites"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Agregar Tatooine como favorito",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"userId\": \"user-123\",\n    \"resourceType\": \"planets\",\n    \"resourceId\": 1\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/favorites",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"favorites"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar favoritos de usuario",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/favorites?userId=user-123",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"favorites"
+							],
+							"query": [
+								{
+									"key": "userId",
+									"value": "user-123"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar favorito",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/favorites/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"favorites",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "http://localhost:3021"
+		}
+	]
+}
