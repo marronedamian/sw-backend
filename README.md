@@ -1,44 +1,56 @@
-# Star Wars API
+# 🌌 Star Wars API 🚀
 
-API RESTful de Star Wars con arquitectura hexagonal, conectada a SWAPI.dev. Permite explorar personajes, películas, naves y planetas, gestionar favoritos y comparar ítems.
+API RESTful de Star Wars con **arquitectura hexagonal**, conectada a [SWAPI.dev](https://swapi.dev).  
+Permite explorar personajes, películas, naves y planetas, así como **gestionar favoritos** ⭐ y **comparar ítems** ⚖️.
 
-## Características Principales
+🌍 **Demo**: https://api.thestarwars.site/api
 
-- ✅ **Arquitectura Hexagonal**: Dominio, aplicación e infraestructura separados.
-- 🌐 **Conexión a SWAPI**: Datos en tiempo real de [swapi.dev](https://swapi.dev).
-- ⭐ **Sistema de Favoritos**: Guarda tus ítems favoritos.
-- ⚖️ **Comparación**: Compara personajes, naves o planetas.
-- 🧪 **100% Testeado**: Cobertura completa con Jest.
-- 🔐 **Seguridad**: Validación de datos y protección de rutas.
+---
 
-## Tecnologías
+## ✨ Características Principales
 
-- **Backend**: NestJS
-- **Base de Datos**: SQLite (favoritos)
-- **Cache**: Redis
-- **Testing**: Jest + Supertest
-- **Documentación**: Swagger / OpenAPI
+- ✅ **Arquitectura Hexagonal** → Dominio, aplicación e infraestructura separados para máxima escalabilidad.
+- 🌐 **Conexión a SWAPI** → Datos en tiempo real de [swapi.dev](https://swapi.dev).
+- ⭐ **Sistema de Favoritos** → Guarda y gestiona tus ítems favoritos.
+- ⚖️ **Comparación** → Compara personajes, naves o planetas en detalle.
+- 🧪 **100% Testeado** → Cobertura completa con Jest.
+- 🔐 **Seguridad** → Validación de datos y protección de rutas.
 
-## Instalación
+---
 
-1. **Clonar repositorio**:
+## 🛠 Tecnologías
 
+| Tecnología    | Uso |
+|---------------|-----|
+| **NestJS**    | Framework backend principal |
+| **SQLite**    | Base de datos para favoritos |
+| **Redis**     | Cache de datos |
+| **Jest**      | Testing unitario |
+| **Supertest** | Testing de endpoints |
+| **Swagger**   | Documentación interactiva |
+
+---
+
+## ⚙️ Instalación
+
+1. **Clonar repositorio**
    ```bash
    git clone https://github.com/tu-usuario/star-wars-api.git
    ```
 
-2. **Instalar dependencias**:
-
+2. **Instalar dependencias**
    ```bash
    npm install
    ```
 
-3. **Configurar entorno (.env)**:
+3. **Configurar entorno (.env)**
    ```bash
    cp .env.example .env
    ```
 
-## Configuración (.env)
+---
+
+## 🔑 Variables de Entorno
 
 ```env
 PORT=3021
@@ -49,7 +61,9 @@ REDIS_PORT=6379
 CACHE_TTL=3600
 ```
 
-## Ejecución
+---
+
+## 📜 Scripts
 
 ```bash
 # Modo desarrollo
@@ -63,7 +77,9 @@ npm run start:prod
 npm run test
 ```
 
-## Estructura del Proyecto
+---
+
+## 🗂 Estructura del Proyecto
 
 ```
 src/
@@ -78,9 +94,11 @@ src/
 └── modules/           # Módulos organizados
 ```
 
-## Uso de la API
+---
 
-### Endpoints Principales:
+## 🚀 Uso de la API
+
+### Endpoints Principales
 
 | Categoría   | Endpoint                           | Método | Descripción                 |
 | ----------- | ---------------------------------- | ------ | --------------------------- |
@@ -94,7 +112,9 @@ src/
 |             | `/favorites/:id`                   | DELETE | Eliminar favorito           |
 | Comparación | `/star-wars/:type/compare?ids=1,2` | GET    | Comparar ítems              |
 
-## Ejemplo: Obtener personaje
+---
+
+## 📌 Ejemplo: Obtener personaje
 
 **GET** `/star-wars/people/1`
 
@@ -116,12 +136,16 @@ src/
 }
 ```
 
-## Documentación API (Swagger)
+---
+
+## 📖 Documentación API (Swagger)
 
 Accede a la documentación interactiva en tiempo de ejecución:  
-👉 [http://localhost:3021/api](http://localhost:3021/api)
+👉 http://localhost:3021/api
 
-## Colección Postman
+---
+
+## 📂 Colección Postman
 
 Importa la colección desde:  
 📁 `docs/postman-collection.json`
